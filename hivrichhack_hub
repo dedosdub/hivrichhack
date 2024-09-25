@@ -1,0 +1,182 @@
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/cypherdh/VanisUILIB/main/.gitignore'))()
+
+local Window = library:CreateWindow("Legend HUB", "V4", 10044538000)
+
+local Tab = Window:CreateTab("UNIVERSAL")
+
+local Page = Tab:CreateFrame("Page 1")
+
+Button = Page:CreateButton("Infinite Yield", "ADMIN", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Button = Page:CreateButton("CMD-X", "ADMIN", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
+
+Button = Page:CreateButton("Kapspire", "ADMIN", function()
+loadstring(game:HttpGet("https://exploits.kapspire.com/main.lua"))();
+end)
+
+Button = Page:CreateButton("Fates-Admin", "ADMIN", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+end)
+
+Button = Page:CreateButton("Reviz Admin", "ADMIN", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/pyzjWNhk'))()
+end)
+
+
+local Page = Tab:CreateFrame("Page 2")
+
+Button = Page:CreateButton("L3G3ND HUB V3", "HUB", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/L3G3NDPL4YZ/L3G3ND-HUB-4V/main/L3G3ND%20HUB%20V3",true))()
+end)
+
+Button = Page:CreateButton("PIG HUB", "HUB", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/iPigTW/PigHub/main/pighub.lua",true))()
+end)
+
+Button = Page:CreateButton("UTG", "GUI", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/o5u3/utgrebirth/stuff/script", true))()
+end)
+
+Button = Page:CreateButton("Pendulum", "HUB", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+end)
+
+Button = Page:CreateButton("HUB LOADER", "HUB", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sinret/rbxscript.com-scripts-reuploads-/main/boronide", true))()
+end)
+
+Button = Page:CreateButton("UNIVERSAL LOADER", "HUB", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/madonchik123/USL/main/main.lua"))()
+end)
+
+
+local Page = Tab:CreateFrame("Page 3")
+
+Button = Page:CreateButton("Boobies AND Cheek", "Script", function()
+(getgenv and getgenv() or _G or shared).BB_Settings = {
+Breast = true,
+BreastPhysics = { Target = 5, Speed = 10, Damper = 0.2 },
+BreastSize = 1,
+Cheeks = true,
+CheeksPhysics = { Target = 3, Speed = 10, Damper = 0.1 },
+CheeksSize = 1,
+Collisions = false,
+ForceAllRigs = false,
+Only_Others = false,
+Simulate_Physics_On_LocalPlayer_Only = false,
+}
+--ForceAllRigs is basically forcing the changes on all humanoids that it finds
+--[[
+  Originally Created by:
+  'With love and lust from "V" / Ukiyo'
+  Re-written & Optimized by:
+  Deuces
+]]
+loadstring(
+game:HttpGet("https://gist.githubusercontent.com/htt-py/92db22eeefad0042a6da9117501ad827/raw/BBies.luau", true)
+)()
+end)
+
+Button = Page:CreateButton("CPU saver", "Script", function()
+--[[+
+
+Roblox-GPU-SaverFIXED;
+_VERSION 1.0;
+dsc.gg/empifyutility;
+Licensed under GNU General Public License v3.0;
+
++]]
+
+_G.ShowUp = false --// Shows the gui above (Useful for games like TPT2)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Empire4946/roblox-gpu-saverBETTER/main/handler/main.txt"))()
+end)
+
+Button = Page:CreateButton("Situation Beta", "Script", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Teemsploit/SituationAdmin.lua/main/admin.lua'))()
+end)
+
+Button = Page:CreateButton("anti report", "Script", function()
+Y = hookmetamethod(game,"__namecall",function(self,...)
+ local args = {...};
+ local checkargs = {};
+ local method = getnamecallmethod()
+ local last
+ if method == "Fire" or method == "FireServer" then
+     if self.Name == "MessagePosted" or self.Name == "SayMessageRequest"   then
+           last = args[1]
+           --print(args[1].. last)
+            if last == args[1] then
+            return  Y(self,...)
+              else
+                 return
+                 end
+             if method == "ReportAbuse" and self == game.Players.LocalPlayer then
+                 return
+        end
+     end
+ end  
+ return Y(self,...)
+end)
+end)
+
+Button = Page:CreateButton("FE ANIM (r15-r6)", "Script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Eazvy/public-scripts/main/Universal_Animations_Emotes.lua"))()
+end)
+
+Button = Page:CreateButton("Free Badges (ALL GAMES)", "Script", function()
+for _,v in pairs(workspace:GetDescendants()) do
+if v:IsA("TouchTransmitter") then
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0) --0 is touch
+task.wait()
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
+end
+end
+end)
+
+local Page = Tab:CreateFrame("Page 4")
+
+Button = Page:CreateButton("FE loopkill (KNIFE STRIKE)", "FESCRIPTS", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/R1zve/Roblox-Scripts/main/Knife%20Strife/Loop%20Kill%20All.lua'))()
+end)
+
+Button = Page:CreateButton("FE Annoy (BOXING BETA)", "FESCRIPTS", function()
+for i = 1,3 do
+wait(0.1)
+while true do
+   wait()
+local args = {
+   [1] = game:GetService("Players").LocalPlayer.Character,
+   [2] = "Normal"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.BodyFallImpactSoundRemote:FireServer(unpack(args))
+wait()
+game:GetService("ReplicatedStorage").RemoteEvents.ClientEffects.SwingEffect:FireServer()
+end
+end
+end)
+
+Button = Page:CreateButton("FE GUN MOD (MAD CITY)", "FESCRIPTS", function()
+for i,v in next, getgc(true) do
+  if type(v) == "table" and rawget(v, "Damage") then
+     rawset(v, "RateOfFire", 0) -- firerate
+     rawset(v, "ReloadTime", 0) -- ReloadTime
+     rawset(v, "ClipSize", math.huge) -- inf ammo only works on shotguns etc (math.huge or 0 etc) MaxAmmo
+     rawset(v, "MinAccuracy", 0)
+     rawset(v, "MaxAccuracy", 0)
+     rawset(v, "Burst", 0)
+     rawset(v, "Range", math.huge) -- gun range (serversided)
+     rawset(v, "FireMode", "Burst") -- Burst , Auto
+     rawset(v, "Clips", math.huge) -- Ammo
+  end
+end
+end)
+
+Button = Page:CreateButton("HOHO HUB)", "HUB (ALL GAMES)", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
