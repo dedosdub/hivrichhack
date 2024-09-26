@@ -46,10 +46,11 @@ local Window = Library:CreateWindow({
  
 local Home = Window:CreateTab("Info", 4483362458) -- Title, Image
 local Misc = Window:CreateTab("Main", 4483362458) -- Title, Image
+local Stolen = Window:CreateTab("Paste", 4483362458) -- Title, Image
  
 --// Version
  
-local Version = "1.1"
+local Version = "1.3"
  
 --// Game
  
@@ -58,7 +59,7 @@ if true then
         --// Info
  
         Home:CreateLabel("Hub by vladhivrich and svozovner")
-        Home:CreateLabel("Version: ".. Version)
+        Home:CreateLabel("Version:V1 ".. Version)
     end
 
     do
@@ -67,7 +68,7 @@ if true then
 
         Misc:CreateSection("Universal")
         Misc:CreateButton({
-            Name = "Hivrich Yield v6",
+            Name = "Hivrich Yield v1",
             Callback = function()
                 loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/hivrich%20yield'))()
             end,
@@ -82,11 +83,16 @@ if true then
 
         Misc:CreateSection("BloxStrike")
          Misc:CreateButton({
-            Name = "VladHivrich666 cheat free (work only in bloxstrike)",
+            Name = "VladHivrich666 cheat free Version (work only in bloxstrike)",
             Callback = function()
                 loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/hivrihack%20bloxstrike%20hvh'))()
             end,
         })
+
+    end
+
+    do
+        --// Stolen
 
     end
 end
