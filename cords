@@ -18,7 +18,7 @@ frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 local textLabel = Instance.new("TextLabel")
 textLabel.Parent = frame
 textLabel.Size = UDim2.new(0.8, 0, 0.5, 0)
-textLabel.Text = "Координаты: (0, 0, 0)"
+textLabel.Text = "Cords: (0, 0, 0)"
 textLabel.BackgroundTransparency = 1
 textLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 textLabel.TextSize = 14
@@ -26,7 +26,7 @@ textLabel.Position = UDim2.new(0.1, 0, 0.1, 0)
 
 local hideButton = Instance.new("TextButton")
 hideButton.Parent = frame
-hideButton.Text = "Скрыть"
+hideButton.Text = "Hide"
 hideButton.Size = UDim2.new(0.4, 0, 0.3, 0)
 hideButton.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
 hideButton.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -35,7 +35,7 @@ hideButton.Position = UDim2.new(0.1, 0, 0.6, 0)
 
 local updateButton = Instance.new("TextButton")
 updateButton.Parent = frame
-updateButton.Text = "Обновить"
+updateButton.Text = "Update"
 updateButton.Size = UDim2.new(0.4, 0, 0.3, 0)
 updateButton.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
 updateButton.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -44,7 +44,7 @@ updateButton.Position = UDim2.new(0.5, 0, 0.6, 0)
 
 local function updatePosition()
   local position = rootPart.Position
-  textLabel.Text = "Координаты: (" .. math.floor(position.X) .. ", " .. math.floor(position.Y) .. ", " .. math.floor(position.Z) .. ")"
+  textLabel.Text = "Cords: (" .. math.floor(position.X) .. ", " .. math.floor(position.Y) .. ", " .. math.floor(position.Z) .. ")"
 end
 
 local function hideGUI()
@@ -66,10 +66,10 @@ updatePosition()
 hideButton.MouseButton1Click:Connect(function()
   if screenGui.Enabled then
     hideGUI()
-    hideButton.Text = "Показать"
+    hideButton.Text = "Show"
   else
     showGUI()
-    hideButton.Text = "Скрыть"
+    hideButton.Text = "Hide"
   end
 end)
 
