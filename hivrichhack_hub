@@ -93,6 +93,17 @@ if true then
 
     do
         --// Stolen
-
+        Stolen:CreateButton({
+            Name = "Hivrich Yield v1",
+            Callback = function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/hivrich%20yield'))()
+            end,
+        })
+         Stolen:CreateButton({
+            Name = "VladHivrich666 cheat free Version (work only in bloxstrike)",
+            Callback = function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/hivrihack%20bloxstrike%20hvh'))()
+            end,
+        })
     end
 end
