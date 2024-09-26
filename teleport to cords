@@ -73,7 +73,7 @@ toggleButton.MouseButton1Click:Connect(function()
 end)
 
 local loadButton = Instance.new("TextButton")
-loadButton.Text = "Узнать кординаты"
+loadButton.Text = "Get cords"
 loadButton.Size = UDim2.new(0, 100, 0, 20)
 loadButton.Position = UDim2.new(0, 50, 0, 160)
 loadButton.Parent = frame
