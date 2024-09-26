@@ -13,7 +13,7 @@ frame.BackgroundTransparency = 0.5
 frame.Parent = gui
 
 local xLabel = Instance.new("TextLabel")
-xLabel.Text = "X:"
+xLabel.Text = "X:" 
 xLabel.Size = UDim2.new(0, 26, 0, 20)
 xLabel.Position = UDim2.new(0, 35, 0, 10)
 xLabel.Parent = frame
@@ -80,4 +80,30 @@ loadButton.Parent = frame
 
 loadButton.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/cords'))()
+end)
+
+-- Перемещение GUI
+local isDragging = false
+local dragStartPos = Vector2.new()
+
+frame.InputBegan:Connect(function(inputObject)
+    if inputObject.UserInputType == Enum.UserInputType.MouseButton1 then
+        isDragging = true
+        dragStartPos = Vector2.new(mouse.X, mouse.Y)
+    end
+end)
+
+frame.InputEnded:Connect(function(inputObject)
+    if inputObject.UserInputType == Enum.UserInputType.MouseButton1 then
+        isDragging = false
+    end
+end)
+
+mouse.Move:Connect(function()
+    if isDragging then
+        local mousePos = Vector2.new(mouse.X, mouse.Y)
+        local deltaPos = mousePos - dragStartPos
+        frame.Position = frame.Position + UDim2.new(0, deltaPos.X, 0, deltaPos.Y)
+        dragStartPos = mousePos
+    end
 end)
