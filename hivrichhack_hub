@@ -68,13 +68,6 @@ if true then
 
         Misc:CreateSection("Universal")
         Misc:CreateButton({
-            Name = "Hivrich Yield v1",
-            Callback = function()
-                loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/hivrich%20yield'))()
-            end,
-        })
-
-        Misc:CreateButton({
             Name = "Teleport hack by VladHivrich666",
             Callback = function()
                 loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/teleport%20to%20cords'))()
