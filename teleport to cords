@@ -1,0 +1,83 @@
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+local viewportSize = game:GetService("Workspace").CurrentCamera.ViewportSize
+local gui = Instance.new("ScreenGui")
+gui.Parent = player.PlayerGui
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 200, 0, 190)
+frame.Position = UDim2.new(0, (viewportSize.X - 200) / 2, 0, (viewportSize.Y - 100) / 2)
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.BackgroundTransparency = 0.5
+frame.Parent = gui
+
+local xLabel = Instance.new("TextLabel")
+xLabel.Text = "X:"
+xLabel.Size = UDim2.new(0, 26, 0, 20)
+xLabel.Position = UDim2.new(0, 35, 0, 10)
+xLabel.Parent = frame
+
+local yLabel = Instance.new("TextLabel")
+yLabel.Text = "Y:"
+yLabel.Size = UDim2.new(0, 26, 0, 20)
+yLabel.Position = UDim2.new(0, 35, 0, 40)
+yLabel.Parent = frame
+
+local zLabel = Instance.new("TextLabel")
+zLabel.Text = "Z:"
+zLabel.Size = UDim2.new(0, 26, 0, 20)
+zLabel.Position = UDim2.new(0, 35, 0, 70)
+zLabel.Parent = frame
+
+local xTextBox = Instance.new("TextBox")
+xTextBox.Size = UDim2.new(0, 100, 0, 20)
+xTextBox.Position = UDim2.new(0, 60, 0, 10)
+xTextBox.Parent = frame
+
+local yTextBox = Instance.new("TextBox")
+yTextBox.Size = UDim2.new(0, 100, 0, 20)
+yTextBox.Position = UDim2.new(0, 60, 0, 40)
+yTextBox.Parent = frame
+
+local zTextBox = Instance.new("TextBox")
+zTextBox.Size = UDim2.new(0, 100, 0, 20)
+zTextBox.Position = UDim2.new(0, 60, 0, 70)
+zTextBox.Parent = frame
+
+local teleportButton = Instance.new("TextButton")
+teleportButton.Text = "Teleport"
+teleportButton.Size = UDim2.new(0, 100, 0, 20)
+teleportButton.Position = UDim2.new(0, 50, 0, 100)
+teleportButton.Parent = frame
+
+teleportButton.MouseButton1Click:Connect(function()
+    local posX = tonumber(xTextBox.Text)
+    local posY = tonumber(yTextBox.Text)
+    local posZ = tonumber(zTextBox.Text)
+    
+    player.Character:SetPrimaryPartCFrame(CFrame.new(posX, posY, posZ))
+end)
+
+local showGUI = true
+
+local toggleButton = Instance.new("TextButton")
+toggleButton.Text = "Delite GUI"
+toggleButton.Size = UDim2.new(0, 100, 0, 20)
+toggleButton.Position = UDim2.new(0, 50, 0, 130)
+toggleButton.Parent = frame
+
+toggleButton.MouseButton1Click:Connect(function()
+    showGUI = not showGUI
+    frame.Visible = showGUI
+end)
+
+local loadButton = Instance.new("TextButton")
+loadButton.Text = "Узнать кординаты"
+loadButton.Size = UDim2.new(0, 100, 0, 20)
+loadButton.Position = UDim2.new(0, 50, 0, 160)
+loadButton.Parent = frame
+
+loadButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/cords'))()
+end)
