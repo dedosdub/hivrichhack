@@ -68,7 +68,7 @@ if true then
 
         Misc:CreateSection("Universal")
         Misc:CreateButton({
-            Name = "Teleport hack by VladHivrich666",
+            Name = "Teleport hack",
             Callback = function()
                 loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/teleport%20to%20cords'))()
             end,
