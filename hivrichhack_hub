@@ -50,14 +50,13 @@ local Mati = Window:CreateTab("Other Functions", 4483362458) -- Title, Image
  
 --// Version
  
-local Version = "2.1"
+local Version = "1.7"
  
 --// Game
  
 if true then
     do
         --// Info
- 
         Home:CreateLabel("Hub by vladhivrich and svozovner")
         Home:CreateLabel("Version: ".. Version)
     end
@@ -94,6 +93,18 @@ if true then
             Name = "Doors Vanta Hub",
             Callback = function()
                 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5d9744f681f6e50ab3fc5d9eb45c7cc7.lua"))()
+            end,
+        })
+                Misc:CreateButton({
+            Name = "Doors op hub",
+            Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+            end,
+        })
+                Misc:CreateButton({
+            Name = "Doors BlackKing Hub",
+            Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing-obf/main/Doors%20Blackking%20And%20BobHub"))()
             end,
         })
     end
