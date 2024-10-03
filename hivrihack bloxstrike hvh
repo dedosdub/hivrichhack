@@ -1,11 +1,3 @@
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
---[[
-  Cry More xj3t_
-  you cant even make optimization
-]]
- 
 -- local HWIDTable = loadstring(game:HttpGet("https://raw.githubusercontent.com/CrismonPetrasion/HWID/main/Checker.lua"))()
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
  
@@ -33,20 +25,20 @@ local WorldToViewportPoint = CurrentCamera.WorldToViewportPoint
 local FOVring = Drawing.new("Circle")
 FOVring.Visible = false
 FOVring.Thickness = 1.5
-FOVring.Radius = 999
+FOVring.Radius = 150
 FOVring.Transparency = 1
 FOVring.Color = Color3.fromRGB(200, 200, 200)
  
 local AimSettings = {
-    Enabled = true,
-    TeamCheck = treu,
+    Enabled = false,
+    TeamCheck = false,
     Smoothing = 1,
-    EnableFOV = true
+    EnableFOV = false
 }
  
 local ESPSettings = {
-    Enabled = true,
-    UseTeamColor = true,
+    Enabled = false,
+    UseTeamColor = false,
     ChamsColor = Color3.fromRGB(200,200,200)
 }
  
@@ -64,39 +56,40 @@ local Library = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 --// Window
  
 local Window = Library:CreateWindow({
-    Name = "Vladhivrich666 cheat",
+    Name = "vladhivrich666 cheat",
     LoadingTitle = "Loading Brain",
-    LoadingSubtitle = "By vladhivirc666 and SVOZOVNER",
+    LoadingSubtitle = "By vladhivirc666",
     ConfigurationSaving = {
-        Enabled = true,
-        FolderName = "FIMOZ", -- Create a custom folder for your hub/game
-        FileName = "FIMOZ"
+        Enabled = false,
+        FolderName = "CounterBlox", -- Create a custom folder for your hub/game
+        FileName = "FizzCounterBlox"
     },
     Discord = {
         Enabled = true,
         Invite = "discord.gg/Tyq3YnM2yP", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
         RememberJoins = true -- Set this to false to make them join the discord every time they load it up
     },
-    KeySystem = true, -- Set this to true to use our key system
+    KeySystem = false, -- Set this to true to use our key system
     KeySettings = {
-        Title = "get key in discord server",
-        Subtitle = "and use for hvh or fan:>",
+        Title = "1",
+        Subtitle = "хз иди нахуй крякер сосой",
         Note = "discord.gg/Tyq3YnM2yP",
         FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-        SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+        SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
         GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
         Key = {"kaksosathyinaychyzatriminyti"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
     }
 })
  
 local Home = Window:CreateTab("Home", 4483362458) -- Title, Image
-local Combat = Window:CreateTab("Hamster Combat", 4483362458) -- Title, Image
+local Combat = Window:CreateTab("Combat", 4483362458) -- Title, Image
 local Misc = Window:CreateTab("Misc", 4483362458) -- Title, Image
 local Visuals = Window:CreateTab("Visuals", 4483362458) -- Title, Image
+local TP = Window:CreateTab("TP", 4483362458) -- Title, Image
  
 --// Version
  
-local Version = "1.1"
+local Version = "1.2"
  
 --// Game
  
@@ -124,8 +117,112 @@ if true then
     do
         --// Home
  
-        Home:CreateLabel("Free version")
+        Home:CreateLabel("Premium Version(pizdesh ya spastil)")
         Home:CreateLabel("Version: ".. Version)
+        Home:CreateLabel("Hyi: pobrit")
+    end
+
+    do
+          --// TP
+                function TP:TeleportTo(position)
+                local player = game.Players.LocalPlayer
+                    player.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+                end
+                TP:CreateSection("Vertigo")
+                    TP:CreateButton({
+                    Name = "CT Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-123, 1191, 26))
+                    end,
+        })
+                    TP:CreateButton({
+                    Name = "T Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-174, 1174, 181))
+                    end,
+        })
+                        TP:CreateSection("Nuke")
+                    TP:CreateButton({
+                    Name = "CT Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-1524, -174, -950))
+                    end,
+        })
+                    TP:CreateButton({
+                    Name = "T Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-123, 1191, 26))
+                    end,
+        })
+                        TP:CreateSection("Aztec")
+                    TP:CreateButton({
+                    Name = "CT Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-1329, 1560, -270))
+                    end,
+        })
+                    TP:CreateButton({
+                    Name = "T Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-1680, 2566, -300))
+                    end,
+        })
+                        TP:CreateSection("Train")
+                    TP:CreateButton({
+                    Name = "CT Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-850, 985, 116))
+                    end,
+        })
+                    TP:CreateButton({
+                    Name = "T Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-1174, 990, -118))
+                    end,
+        })
+
+                        TP:CreateSection("Inferno")
+                    TP:CreateButton({
+                    Name = "CT Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-356, 884, -892))
+                    end,
+        })
+                    TP:CreateButton({
+                    Name = "T Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-686, 874, -774))
+                    end,
+        })
+
+                        TP:CreateSection("Barcelona")
+                    TP:CreateButton({
+                    Name = "CT Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(71, -20, 145))
+                    end,
+        })
+                    TP:CreateButton({
+                    Name = "T Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(112, -25, -206))
+                    end,
+        })
+
+                        TP:CreateSection("Mirage")
+                    TP:CreateButton({
+                    Name = "CT Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(-46, 49, 106))
+                    end,
+        })
+                    TP:CreateButton({
+                    Name = "T Base",
+                    Callback = function()
+                        TP:TeleportTo(Vector3.new(172, 56, -15))
+                    end,
+        })
+
     end
  
     do
@@ -134,7 +231,7 @@ if true then
         Combat:CreateSection("AimBot")
         Combat:CreateToggle({
             Name = "AimBot",
-            CurrentValue = true,
+            CurrentValue = false,
             Flag = "Aimbot",
             Callback = function(Value)
                 AimSettings.Enabled = true
@@ -146,7 +243,7 @@ if true then
             Name = "ZOV Radius",
             Range = {0, 2000},
             Increment = 1,
-            CurrentValue = 999,
+            CurrentValue = 150,
             Flag = "FOVRadius", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
                 FOVring.Radius = Value
@@ -164,7 +261,7 @@ if true then
  
         Combat:CreateToggle({
             Name = "Use ZOV",
-            CurrentValue = true,
+            CurrentValue = false,
             Flag = "UseFOV",
             Callback = function(Value)
                 AimSettings.EnableFOV = Value
@@ -172,17 +269,17 @@ if true then
         })
  
         Combat:CreateToggle({
-            Name = "Team Check",
-            CurrentValue = true,
+            Name = "Team Chpeck",
+            CurrentValue = false,
             Flag = "TeamCheck",
             Callback = function(Value)
                 AimSettings.TeamCheck = Value
             end,
         })
  
-        Combat:CreateSection("Character")
+        Combat:CreateSection("Character aaaaa sosi hyi")
         Combat:CreateToggle({
-            Name = "Spin in penis(spinbot)",
+            Name = "Spin in penis",
             CurrentValue = false,
             Flag = "Spinbot",
             Callback = function(Value)
@@ -192,10 +289,10 @@ if true then
  
         Combat:CreateSection("Settings")
         Combat:CreateSlider({
-            Name = "Speedoznytsa",
-            Range = {0, 10},
+            Name = "Speed of spin in penis",
+            Range = {0, 15},
             Increment = 1,
-            CurrentValue = 1,
+            CurrentValue = 5,
             Flag = "FOVRadius", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
                 _G.Speed = Value
@@ -208,18 +305,18 @@ if true then
  
         Misc:CreateSection("Guns")
         Misc:CreateButton({
-            Name = "pidr fire(Use only weapons with a firing rate below 0.30s",
+            Name = "pidr fire",
             Callback = function()
                 for _, Weapon in ipairs(Weapons:GetChildren()) do
                     if Weapon:FindFirstChild("FireRate") then
-                        Weapon:FindFirstChild("FireRate").Value = 0.30
+                        Weapon:FindFirstChild("FireRate").Value = 0
                     end 
                 end
             end,
         })
  
         Misc:CreateButton({
-            Name = "No Spread(work bad but work)",
+            Name = "No Spread",
             Callback = function()
                 for _, Weapon in ipairs(Weapons:GetChildren()) do
                     if Weapon:FindFirstChild("Spread") then
@@ -233,33 +330,33 @@ if true then
         })
  
         Misc:CreateButton({
-            Name = "Fster Reload Time",
+            Name = "Instant Reload Time",
             Callback = function()
                 for _, Weapon in ipairs(Weapons:GetChildren()) do
                     if Weapon:FindFirstChild("ReloadTime") then
-                        Weapon:FindFirstChild("ReloadTime").Value = 0.5
+                        Weapon:FindFirstChild("ReloadTime").Value = 0.05
                     end 
                 end
             end,
         })
  
         Misc:CreateButton({
-            Name = "Faster Equip Time",
+            Name = "Instant Equip Time",
             Callback = function()
                 for _, Weapon in ipairs(Weapons:GetChildren()) do
                     if Weapon:FindFirstChild("EquipTime") then
-                        Weapon:FindFirstChild("EquipTime").Value = 0.3
+                        Weapon:FindFirstChild("EquipTime").Value = 0.05
                     end 
                 end
             end,
         })
  
         Misc:CreateButton({
-            Name = "Bigger Ammo(set ammo to 30/1488",
+            Name = "Infinite Ammo",
             Callback = function()
                 for _, Weapon in ipairs(Weapons:GetChildren()) do
                     if Weapon:FindFirstChild("Ammo") and Weapon:FindFirstChild("StoredAmmo") then
-                        Weapon:FindFirstChild("Ammo").Value = 30
+                        Weapon:FindFirstChild("Ammo").Value = 9999999999
                         Weapon:FindFirstChild("StoredAmmo").Value = 1488
                     end 
                 end
@@ -268,7 +365,7 @@ if true then
  
         Misc:CreateSection("Sounds")
         Misc:CreateToggle({
-            Name = "Hit Sound(no work and i don't know how to fix them pls help - prank1303 - my discord)",
+            Name = "Hit Sound(no work)",
             CurrentValue = false,
             Flag = "HitSound", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
@@ -277,7 +374,7 @@ if true then
         })
  
         Misc:CreateToggle({
-            Name = "Kill Sound(no work just like hit sounds)",
+            Name = "Kill Sound(just like hit sounds)",
             CurrentValue = false,
             Flag = "KillSound", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
@@ -358,7 +455,7 @@ if true then
         })
  
         Misc:CreateToggle({
-            Name = "Remove Sperma(remove flash effect)",
+            Name = "Remove Flash",
             CurrentValue = false,
             Flag = "RemoveFlash",
             Callback = function(Value)
@@ -367,7 +464,7 @@ if true then
         })
  
         Misc:CreateToggle({
-            Name = "Remove Perdesh bati(remove smoke)",
+            Name = "Remove Perdesh bati(smoke)",
             CurrentValue = false,
             Flag = "RemoveSmoke",
             Callback = function(Value)
@@ -395,7 +492,7 @@ if true then
  
         Misc:CreateSection("Movement")
         Misc:CreateToggle({
-            Name = "Bhop",
+            Name = "Fast Bhop",
             CurrentValue = false,
             Flag = "Bhop", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
@@ -405,23 +502,52 @@ if true then
  
         Misc:CreateSlider({
             Name = "Bhop Speed",
-            Range = {0, 35},
+            Range = {0, 350},
             Increment = 1,
-            CurrentValue = 20,
+            CurrentValue = 100,
             Flag = "BhopSpeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
             Callback = function(Value)
                 _G.BhopSpeed = Value
             end,
         })
  
-        Misc:CreateSection("maybe later...")
+        Misc:CreateSection("Character")
+        Misc:CreateToggle({
+            Name = "Fly ychis sin miagy",
+            CurrentValue = false,
+            Flag = "Fly", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+            Callback = function(Value)
+                _G.Fly = Value
+            end,
+        })
+ 
+        Misc:CreateToggle({
+            Name = "Noclip",
+            CurrentValue = false,
+            Flag = "Noclip", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+            Callback = function(Value)
+                _G.Noclip = Value
+            end,
+        })
+ 
+        Misc:CreateSlider({
+            Name = "Fly Speed",
+            Range = {0, 120},
+            Increment = 1,
+            CurrentValue = 16,
+            Flag = "FlySpeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+            Callback = function(Value)
+                _G.FlySpeed = Value
+            end,
+        })
+ 
         Misc:CreateSection("Stuff")
         Misc:CreateButton({
-            Name = "Infinite Cash(no work, don't press(later fix))",
+            Name = "Infinite Cash",
             Callback = function()
                 RunService.RenderStepped:Connect(function()
                     if LocalPlayer and LocalPlayer.Parent then
-                        LocalPlayer.Cash.Value = 1
+                        LocalPlayer.Cash.Value = 9550
                     end
                     task.wait()
                 end)
@@ -435,7 +561,7 @@ if true then
         Visuals:CreateSection("Cumera")
         Visuals:CreateSlider({
             Name = "Field Of View",
-            Range = {0, 120},
+            Range = {0, 300},
             Increment = 1,
             CurrentValue = 80,
             Flag = "BhopSpeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -456,7 +582,7 @@ if true then
  
         Visuals:CreateSlider({
             Name = "Third Person Distance",
-            Range = {0, 30},
+            Range = {0, 50},
             Increment = 1,
             CurrentValue = 10,
             Flag = "ThirdPersonDistance", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -530,7 +656,7 @@ LocalPlayer.Additionals.TotalDamage.Changed:Connect(function(Value)
         local HitSound = Instance.new("Sound")
 		HitSound.Parent = game:GetService("SoundService")
 		HitSound.SoundId = 'rbxassetid://'..Sounds.HitSound
-		HitSound.Volume = 300
+		HitSound.Volume = 10
 		HitSound:Play()
     end
 end)
@@ -540,7 +666,7 @@ LocalPlayer.Status.Kills.Changed:Connect(function(Value)
         local KillSound = Instance.new("Sound")
 		KillSound.Parent = game:GetService("SoundService")
 		KillSound.SoundId = 'rbxassetid://'..Sounds.KillSound
-		KillSound.Volume = 200
+		KillSound.Volume = 49
 		KillSound:Play()
     end
 end)
@@ -614,6 +740,49 @@ RunService.RenderStepped:Connect(function()
 end)
  
 RunService.RenderStepped:Connect(function()
+    if _G.Noclip == true then
+        for _, Instance in pairs(LocalPlayer.Character:GetChildren()) do
+            if Instance:IsA("BasePart") and Instance.CanCollide == true then
+                Instance.CanCollide = false
+            end
+        end
+    else
+        for _, Instance in pairs(LocalPlayer.Character:GetChildren()) do
+            if Instance:IsA("BasePart") and Instance.CanCollide == true then
+                Instance.CanCollide = true
+            end
+        end
+    end
+    task.wait()
+end)
+ 
+RunService.RenderStepped:Connect(function()
+    if _G.Fly == true then
+        if LocalPlayer.Character ~= nil then
+            local Speed = _G.FlySpeed or 16
+            local Velocity = Vector3.new(0, 1, 0)
+ 
+            if UserInputService:IsKeyDown(Enum.KeyCode.W) then
+                Velocity = Velocity + (Camera.CoordinateFrame.lookVector * Speed)
+            end
+            if UserInputService:IsKeyDown(Enum.KeyCode.A) then
+                Velocity = Velocity + (Camera.CoordinateFrame.rightVector * -Speed)
+            end
+            if UserInputService:IsKeyDown(Enum.KeyCode.S) then
+                Velocity = Velocity + (Camera.CoordinateFrame.lookVector * -Speed)
+            end
+            if UserInputService:IsKeyDown(Enum.KeyCode.D) then
+                Velocity = Velocity + (Camera.CoordinateFrame.rightVector * Speed)
+            end
+ 
+            LocalPlayer.Character.HumanoidRootPart.Velocity = Velocity
+            LocalPlayer.Character.Humanoid.PlatformStand = true
+        end
+    end
+    task.wait()
+end)
+ 
+RunService.RenderStepped:Connect(function()
     if _G.Bhop == true then
         if LocalPlayer.Character ~= nil and UserInputService:IsKeyDown(Enum.KeyCode.Space) and LocalPlayer.PlayerGui.GUI.Main.GlobalChat.Visible == false then
             LocalPlayer.Character.Humanoid.Jump = true
@@ -663,7 +832,7 @@ RunService.RenderStepped:Connect(function()
     if LocalPlayer.Character ~= nil and LocalPlayer.Character.Humanoid.Health > 0 then
         if _G.SpinBot then
             LocalPlayer.Character.Humanoid.AutoRotate = false
-            LocalPlayer.Character.HumanoidRootPart.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(_G.Speed or 0), 0)
+            LocalPlayer.Character.HumanoidRootPart.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(_G.Speed or 50), 0)
         else
             LocalPlayer.Character.Humanoid.AutoRotate = true
         end
