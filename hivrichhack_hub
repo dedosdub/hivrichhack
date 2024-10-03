@@ -50,7 +50,7 @@ local Mati = Window:CreateTab("Other Functions", 4483362458) -- Title, Image
  
 --// Version
  
-local Version = "1.1"
+local Version = "2.1"
  
 --// Game
  
