@@ -73,6 +73,12 @@ if true then
                 loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/teleport%20to%20cords'))()
             end,
         })
+        Misc:CreateButton({
+            Name = "cliphack",
+            Callback = function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/cliphack'))()
+            end,
+        })
 
         Misc:CreateSection("BloxStrike")
          Misc:CreateButton({
