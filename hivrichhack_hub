@@ -80,14 +80,6 @@ if true then
             end,
         })
 
-        Misc:CreateSection("BloxStrike")
-         Misc:CreateButton({
-            Name = "VladHivrich666 cheat free (work only in bloxstrike)",
-            Callback = function()
-                loadstring(game:HttpGet('https://raw.githubusercontent.com/dedosdub/hivrichhack/refs/heads/main/hivrihack%20bloxstrike%20hvh'))()
-            end,
-        })
-
         Misc:CreateSection("ESP")
         Misc:CreateButton({
             Name = "ESP",
