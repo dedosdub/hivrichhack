@@ -57,7 +57,7 @@ local Version = "1.7"
 if true then
     do
         --// Info
-        Home:CreateLabel("Hub by vladhivrich and svozovner")
+        Home:CreateLabel("HIVRICHHUB LEGACY")
         Home:CreateLabel("Version: ".. Version)
     end
 
@@ -88,7 +88,7 @@ if true then
             end,
         })
 
-        Misc:CreateSection("Doors")
+        Misc:CreateSection("ESP")
         Misc:CreateButton({
             Name = "ESP",
             Callback = function()
