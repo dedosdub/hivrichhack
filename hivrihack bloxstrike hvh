@@ -592,6 +592,14 @@ if true then
         })
  
         Visuals:CreateSection("Players")
+
+        Visuals:CreateButton({
+            Name = "ESP",
+            Callback = function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/Daniagg/ESP.lua/refs/heads/main/esp.lua'))()
+            end,
+        })
+ 
         Visuals:CreateToggle({
             Name = "Chams",
             CurrentValue = false,
@@ -652,7 +660,7 @@ if true then
 end
  
 LocalPlayer.Additionals.TotalDamage.Changed:Connect(function(Value)
-    if Sounds.HitSoundEnabled == true and Value ~= 0 then
+    if Sounds.HitSoundEnabled == true then
         local HitSound = Instance.new("Sound")
 		HitSound.Parent = game:GetService("SoundService")
 		HitSound.SoundId = 'rbxassetid://'..Sounds.HitSound
@@ -662,7 +670,7 @@ LocalPlayer.Additionals.TotalDamage.Changed:Connect(function(Value)
 end)
  
 LocalPlayer.Status.Kills.Changed:Connect(function(Value)
-    if Sounds.KillSoundEnabled == true and Value ~= 0 then
+    if Sounds.KillSoundEnabled == true then
         local KillSound = Instance.new("Sound")
 		KillSound.Parent = game:GetService("SoundService")
 		KillSound.SoundId = 'rbxassetid://'..Sounds.KillSound
@@ -955,6 +963,17 @@ RunService.RenderStepped:Connect(function()
             if Player.Character:FindFirstChild("Highlight") then
                 Player.Character.Highlight:Destroy()
             end
+        end
+    end
+    task.wait()
+end)
+
+RunService.RenderStepped:Connect(function()
+    for _, Player in ipairs(Players:GetChildren()) do
+        if ESPSettings.box == true then
+            
+        else
+        
         end
     end
     task.wait()
